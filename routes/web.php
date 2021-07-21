@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+/* HOME WELCOME ROUTE */
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+/* GROUP ROUTE */
+Route::prefix('api/view')->group(function () {
+
+    // Sub-Route here
+
 });
