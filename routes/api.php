@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\contactController;
 
+use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,5 +26,11 @@ Route::prefix('v1')->group(function () {
 
     /* GET Contatcts */
     Route::get('/contacts', [contactController::class, 'getContacts']);
+
+    /* GET users */
+    Route::get('/users', function() {
+        $users = User::all();
+        return response($users, 200);
+    });
 
 });
