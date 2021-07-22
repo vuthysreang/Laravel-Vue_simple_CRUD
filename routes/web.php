@@ -20,9 +20,3 @@ Route::get('/', function () {
 });
 
 
-/* GROUP ROUTE */
-Route::prefix('api/view')->group(function () {
-
-    // Sub-Route here
-
-});
